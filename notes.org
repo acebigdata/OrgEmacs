@@ -1,0 +1,42 @@
+;;------------------------------------------------------
+* Headlines
+* Local visibility
+Tab key
+
+* Global visibility
+Shift Tab key
+
+* Level 1 heading
+** Level 2 heading
+** Another level 2
+Decrease level with M- right key
+Increase level with M- left key
+
+* L1 heading1
+** L2 heading1.1
+** L2 heading1.2
+** L2 heading1.3
+* L1 heading2
+** L2 heading2.1
+** L2 heading2.2
+** L2 heading2.3
+
+Move up M- up key
+Move down M- down key
+
+Move a headline under another top level headline:
+Cursor on the headline then C-C C-W
+;;------------------------------------------------------
+
+* To-Do Lists
+** Cycling through todo and done
+   shift right key; shift left key
+
+** More keywords can be defined with a line
+   #+SEQ_TODO:
+   items left of | are to do items (red)
+   items right of | are Done items (green)
+   activate line with C-c C-c
+   Get a menu of all keywoards: C-c C-t
+;;------------------------------------------------------
+

@@ -1,0 +1,30 @@
+* 2017-Work-Log
+  My work log for 2017
+
+* 2017-March-log
+  
+  Work log for march 2017
+
+** Emacs Training
+   - A good selection of video tutorials for emacs, linux etc.
+   - https://www.youtube.com/playlist?list=PLEB9CCD61FA858FC5
+
+*** Create a table
+    | Col1  | Col2   |
+    | item1 | value1 |
+
+*** Checklist
+    - [ ] This is a checklist entry
+    - [X] C-c C-c toggles through things
+
+*** Insert a date
+    - C-c . <2017-03-01 Wed>
+
+*** Source Code Blocks
+#+BEGIN_SRC python
+return("Hello World")
+#+END_SRC
+
+#+RESULTS:
+: Hello World
+
