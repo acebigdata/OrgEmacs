@@ -1,12 +1,20 @@
 * Ukraine Visa
   SCHEDULED: <2017-03-02 Thu>
-** Contact Travel Agency
+** DONE Contact Travel Agency
    SCHEDULED: <2017-03-02 Thu>
    http://www.travel-to-ukraine.info/en/services/visa/
-** Call Embassy
+** DONE Call Embassy
    SCHEDULED: <2017-03-02 Thu>
    http://usa.mfa.gov.ua/en/consular-affairs/services/visas
    +1 (212) 371 6965
+* Offsite Itinerary
+| Flight      | Date             |  USD |
+| JFK --> KBP | <2017-04-19 Wed> |  440 |
+| KBP --> DUS | <2017-04-23 Sun> |  190 |
+| DUS --> JFK | <2017-04-29 Sat> |  642 |
+| Total       | NA               | 1272 |
+#+TBLFM: @5$3=vsum(@2..@4)
+
 * Tax Filing
   DEADLINE: <2017-03-03 Fri>
 * Renew Passport
