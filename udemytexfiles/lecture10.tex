@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\title{Tables, Floats and the Tabular Environment}
+\author{Toni Farley}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Let's learn to make tables.
+
+\subsection{The Tabular Environment}
+
+This is the tabular environment for the table shown in Table~\ref{tab:grades}.
+
+\bigskip
+
+\begin{tabular}{|c||c|}
+\hline 
+Name & Your Name Here \\
+\hline 
+Subject & Writing with \LaTeX \\
+\hline 
+Grade & A+ \\
+\hline 
+\end{tabular}
+
+\subsection{Floats: Table}
+
+\begin{table}[htbp]
+\caption{My Gradebook}
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline 
+Name & Your Name Here \\
+\hline 
+Subject & Writing with \LaTeX \\
+\hline 
+Grade & A+ \\
+\hline 
+\end{tabular}
+\end{center}
+\label{tab:grades}
+\end{table}
+
+\subsection{References}
+
+You can see my grades in Table~\ref{tab:grades}.
+
+\section{Conclusion}
+
+Now I know how to create basic tables.
+
+\end{document}

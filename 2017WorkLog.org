@@ -54,10 +54,17 @@ return(x1)
 ** Date: <2017-03-03 Fri>
 
 
+*** 
+
 *** SQLite
+    - [ ] 
+    - [ ] 
+    - 
+    - 
 *** Good Data Science Sites
     - http://chrisalbon.com/
     - https://www.r-bloggers.com/
 *** Emacs Learning
     - Orgmode: http://orgmode.org/manual/Plain-lists
-    - 
+    - M-Ret: insert a bullet
+    - [ ] M-Shift-Ret insert a todo
