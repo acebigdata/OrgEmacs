@@ -68,3 +68,10 @@ return(x1)
     - Orgmode: http://orgmode.org/manual/Plain-lists
     - M-Ret: insert a bullet
     - [ ] M-Shift-Ret insert a todo
+
+** Date:<2017-03-04 Sat>
+*** Weigh-in: 272
+
+*** Jupyter notebook
+    - [ ] Control then m then l will show line numbers in the jupyter cell
+    - 
