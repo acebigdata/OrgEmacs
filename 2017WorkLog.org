@@ -71,7 +71,18 @@ return(x1)
 
 ** Date:<2017-03-04 Sat>
 *** Weigh-in: 272
-
 *** Jupyter notebook
-    - [ ] Control then m then l will show line numbers in the jupyter cell
-    - 
+    - [ ] Control then m then l will show line numbers in the jupyter cell 
+** Date:<2017-03-06 Mon>
+*** Steps to git overwirte local files
+    - [ ] git fetch origin master
+    - [ ] git reset --hard FETCH_HEAD
+    - [ ] git clean -df
+
+** Date:<2017-03-09 Thu>
+*** Class, Attributes, Method
+    - [ ] Create a class
+    - [ ] Attributes:
+    - [ ] Methods:
+      - [ ] __init__(self)
+*** 
