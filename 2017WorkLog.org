@@ -51,7 +51,7 @@ return(x1)
     - an awesome forum from TW: https://emacser.tw/
     - Emacs 101: https://github.com/emacs-tw/emacs-101
 
-** Date: <2017-03-03 Fri>
+** Date:<2017-03-03 Fri>
 
 
 *** 
@@ -85,4 +85,29 @@ return(x1)
     - [ ] Attributes:
     - [ ] Methods:
       - [ ] __init__(self)
-*** 
+** Date:<2017-03-10 Fri> 
+*** Project Organization
+    - [ ] AVA Model
+      - [ ] Database: SQLite Youtube
+      - [ ] Modeling: Start Building
+      - [ ] Web App Framework: Django Udemy
+      - [ ] Python Mid-end: Data Science Python Udemy
+      - [ ] Python Mid-end: Machine Learning Bootcamp Udemy
+      - [ ] Front-end: Web development Udemy/Free Code Academy
+      - [ ] Model update: VBA
+    - [ ] Udacity Deep Learning
+      - [ ] Review all materials again
+      - [ ] Python Fundamentals: Pluralsight + Lynda
+      - [ ] C++ Prep: Pluralsight + Lynda
+    - [ ] acebigdata
+      - [ ] Review Pelican Process
+      - [ ] Organize Github
+      - [ ] Organize blog
+    - [ ] pomodorocoder
+      - [ ] Make first series: SQLite with Python
+    - [ ] Other Data Science
+      - [ ] DataCamp
+      - [ ] Standford Machine Learning: Octave
+      - [ ] Toronto Uiversity Nueral Network:  Octave
+      - [ ] Analytical Edge
+      - [ ] Udemy
