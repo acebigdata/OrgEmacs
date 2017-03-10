@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
+\title{Redefining Commands}
+\author{Toni Farley}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+These are a few ways to control the typesetting output.
+
+\subsection{Continuing a list}
+
+\begin{enumerate}
+\item First
+\item Second
+\end{enumerate}
+
+Now I have more to say ...
+
+\begin{enumerate}[resume]
+\item Third
+\item Fourth
+\end{enumerate}
+
+You can do this without a package too:
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item Fifth
+\item Sixth
+\end{enumerate}
+
+\subsection{Changing the numbers}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+\begin{enumerate}
+\item One
+\item Two
+\item Three
+\end{enumerate}
+
+\subsection{Changing the bullets}
+
+\renewcommand{\labelitemi}{$\rightarrow$}
+\begin{itemize}
+\item Ready
+\item Set
+\item Go
+\end{itemize}
+
+\section{Conclusion}
+
+We can control output using packages, and by renewing \LaTeX commands.
+
+\end{document}

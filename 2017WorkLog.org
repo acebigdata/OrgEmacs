@@ -1,3 +1,4 @@
+
 * 2017-Work-Log
   My work log for 2017
 
@@ -40,13 +41,48 @@ return(x1)
 
 ** Date:<2017-03-02 Thu>
 
-*** TODO Todos
+*** DONE Todos
     SCHEDULED: <2017-03-02 Thu>
-    - [ ] Excel Macro Check AVA Model (Find a solution to empty oject for each loop)
+    - [X] Excel Macro Check AVA Model (Find a solution to empty oject for each loop)
     - [X] Demo Swedes
-    - [ ] SQLite set up and uploading
+    - [X] SQLite set up and uploading
 
-*** Some good Emacs findings
+*** Emacs Learning
     - an awesome forum from TW: https://emacser.tw/
     - Emacs 101: https://github.com/emacs-tw/emacs-101
+
+** Date: <2017-03-03 Fri>
+
+
+*** 
+
+*** SQLite
+    - [ ] 
+    - [ ] 
     - 
+    - 
+*** Good Data Science Sites
+    - http://chrisalbon.com/
+    - https://www.r-bloggers.com/
+*** Emacs Learning
+    - Orgmode: http://orgmode.org/manual/Plain-lists
+    - M-Ret: insert a bullet
+    - [ ] M-Shift-Ret insert a todo
+
+** Date:<2017-03-04 Sat>
+*** Weigh-in: 272
+*** Jupyter notebook
+    - [ ] Control then m then l will show line numbers in the jupyter cell 
+** Date:<2017-03-06 Mon>
+*** Steps to git overwirte local files
+    - [ ] git fetch origin master
+    - [ ] git reset --hard FETCH_HEAD
+    - [ ] git clean -df
+
+** Date:<2017-03-09 Thu>
+*** Class, Attributes, Method
+    - [ ] Create a class
+    - [ ] Attributes:
+    - [ ] Methods:
+      - [ ] __init__(self)
+*** 
