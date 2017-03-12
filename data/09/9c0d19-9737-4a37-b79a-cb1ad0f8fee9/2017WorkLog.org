@@ -1,0 +1,132 @@
+
+* 2017-Work-Log
+  My work log for 2017
+
+* 2017-March-log
+  
+  Work log for march 2017
+
+** Date:<2017-03-01 Wed>
+
+*** Emacs Training
+    - A good selection of video tutorials for emacs, linux etc.
+      https://www.youtube.com/playlist?list=PLEB9CCD61FA858FC5
+    - A good github.
+      https://github.com/emacs-tw/emacs-101
+
+**** Create a table
+     | Col1  | Col2   |
+     | item1 | value1 |
+
+**** Checklist
+     - [ ] This is a checklist entry
+     - [X] C-c C-c toggles through things
+
+**** Insert a date
+     - C-c . <2017-03-01 Wed>
+
+**** Source Code Blocks
+#+BEGIN_SRC python
+import numpy as np
+x1 = np.random.randn(5,5)
+return(x1)
+#+END_SRC
+
+#+RESULTS:
+|  1.25504941 |  1.31659868 |  -1.0607869 | -1.17213411 |  1.10838667 |
+| -0.33681288 | -0.63341665 | -0.48987775 |  0.13656405 | -0.55864926 |
+|  0.68104102 |   1.5197859 |  0.76629418 |  0.59894311 | -0.42007498 |
+|  0.44924481 |  1.28854033 | -0.38248216 |  0.73985823 |  -0.5910014 |
+|  0.65458797 |  0.67231427 |  -0.6930318 | -0.73751589 |  0.85701368 |
+
+** Date:<2017-03-02 Thu>
+
+*** DONE Todos
+    SCHEDULED: <2017-03-02 Thu>
+    - [X] Excel Macro Check AVA Model (Find a solution to empty oject for each loop)
+    - [X] Demo Swedes
+    - [X] SQLite set up and uploading
+
+*** Emacs Learning
+    - an awesome forum from TW: https://emacser.tw/
+    - Emacs 101: https://github.com/emacs-tw/emacs-101
+
+** Date:<2017-03-03 Fri>
+
+
+*** 
+
+*** SQLite
+    - [ ] 
+    - [ ] 
+    - 
+    - 
+*** Good Data Science Sites
+    - http://chrisalbon.com/
+    - https://www.r-bloggers.com/
+*** Emacs Learning
+    - Orgmode: http://orgmode.org/manual/Plain-lists
+    - M-Ret: insert a bullet
+    - [ ] M-Shift-Ret insert a todo
+
+** Date:<2017-03-04 Sat>
+*** Weigh-in: 272
+*** Jupyter notebook
+    - [ ] Control then m then l will show line numbers in the jupyter cell 
+** Date:<2017-03-06 Mon>
+*** Steps to git overwirte local files
+    - [ ] git fetch origin master
+    - [ ] git reset --hard FETCH_HEAD
+    - [ ] git clean -df
+
+** Date:<2017-03-09 Thu>
+*** Class, Attributes, Method
+    - [ ] Create a class
+    - [ ] Attributes:
+    - [ ] Methods:
+      - [ ] __init__(self)
+** Date:<2017-03-10 Fri> 
+*** Project Organization
+    - [ ] AVA Model
+      - [ ] Database: SQLite Youtube
+      - [ ] Modeling: Start Building
+      - [ ] Web App Framework: Django Udemy
+      - [ ] Python Mid-end: Data Science Python Udemy
+      - [ ] Python Mid-end: Machine Learning Bootcamp Udemy
+      - [ ] Front-end: Web development Udemy/Free Code Academy
+      - [ ] Model update: VBA
+    - [ ] Udacity Deep Learning
+      - [ ] Review all materials again
+      - [ ] Python Fundamentals: Pluralsight + Lynda
+      - [ ] C++ Prep: Pluralsight + Lynda
+    - [ ] acebigdata
+      - [ ] Review Pelican Process
+      - [ ] Organize Github
+      - [ ] Organize blog
+    - [ ] pomodorocoder
+      - [ ] Make first series: SQLite with Python
+    - [ ] Other Data Science
+      - [ ] DataCamp
+      - [ ] Standford Machine Learning: Octave
+      - [ ] Toronto Uiversity Nueral Network:  Octave
+      - [ ] Analytical Edge
+      - [ ] Udemy
+*** SQLite
+    - [ ] SQLite Part1
+    - [ ] SQLite Part2
+    - [ ] SQLite Part3
+      - [ ] SQLite Rules
+	- [ ] Commands end with semicolon ";"
+	- [ ] 3 Types of Values: string, numeric, binary
+	- [ ] 5 Types in SQLite: integer, real, text, blob, Null
+	- [ ] Case insensitive
+	- [ ] Single Line Comments --
+	- [ ] Multiline Comments /**/
+	- [ ] 1 Primary Key
+      - [ ] 
+    - [ ] SQLite Part4
+** Date:<2017-03-11 Sat> 
+*** Store Github login and password
+    - [ ] create a text file: ~/.netrc
+    - [ ] 
+
