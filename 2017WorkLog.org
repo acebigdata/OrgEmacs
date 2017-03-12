@@ -111,3 +111,32 @@ return(x1)
       - [ ] Toronto Uiversity Nueral Network:  Octave
       - [ ] Analytical Edge
       - [ ] Udemy
+*** SQLite
+    - [ ] SQLite Part1
+    - [ ] SQLite Part2
+    - [ ] SQLite Part3
+      - [ ] SQLite Rules
+	- [ ] Commands end with semicolon ";"
+	- [ ] 3 Types of Values: string, numeric, binary
+	- [ ] 5 Types in SQLite: integer, real, text, blob, Null
+	- [ ] Case insensitive
+	- [ ] Single Line Comments --
+	- [ ] Multiline Comments /**/
+	- [ ] 1 Primary Key
+      - [ ] 
+    - [ ] SQLite Part4
+** Date:<2017-03-11 Sat> 
+*** Store Github login and password
+    - [ ] create a text file: ~/.netrc
+    - [ ] in the file type in the following:
+          machine github.com
+	      login <user>
+	      password <password>
+    - [ ] Can also run the following command
+      - [ ] $ git config credential.helper store
+      - [ ] $ git push https://github.com/repo.git
+      - [ ] Username for 'https://github.com': <USERNAME>
+      - [ ] Password for 'https://USERNAME@github.com': <PASSWORD>
+
+
+
