@@ -137,6 +137,16 @@ return(x1)
       - [ ] $ git push https://github.com/repo.git
       - [ ] Username for 'https://github.com': <USERNAME>
       - [ ] Password for 'https://USERNAME@github.com': <PASSWORD>
+*** Install Cuda on Ubuntu 16.04
+    - [ ]
 
+** Date: <2017-03-14 Tue>
 
-
+*** Django
+**** Create first django project
+     - [ ] Open up Atom Text Editor
+     - [ ] Open command line terminal
+     - [ ] Activate the Virtual Environment: activate myDjango
+     - [ ] Create first project: adjango-admin startproject first_project
+       - [ ] 
+     - [ ] 
