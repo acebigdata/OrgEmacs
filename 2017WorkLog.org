@@ -209,3 +209,32 @@ return(x1)
 	- [X] templates folder contains index.html: front end codes: HTML+CSS+JS
 	- [X] in index.html file, use Django tags to connect with views.py file
 	- [X] build index(request) function in views.py file to "render" Django tags and realize the connection
+** Date:<2017-03-25 Sat>
+*** Flask Notes
+    - [X] Docker
+      - [X] docker-compose up
+      - [X] docker-compose stop
+      - [X] docker-compose rm -f
+      - [X] docker rmi -f $(docker images -qf dangling = true)
+    - [X] Install Flask Dependencies
+      - [X] from flask import Flask
+      - [X] function create_app(), Create a Flask application using the app factory pattern
+    - [X] Blueprints and Jinja2 Templates
+      - [X] Blueprints: components of the web app
+      - [X] App Folder/Blueprints/Page/views.py
+    - [X] Develop Patterns
+      - [X] Django uses MTV (model-template-view)
+	- [X] database models
+	- [X] html templates
+	- [X] router views, http render
+      - [X] Rails uses MVC (model-view-controller)
+      - [X] Flasks I'm doing will stick with MTVish pattern
+    - [X] Deciding on a consistent and crisp look for the app
+      - [X] start from zero: not really
+      - [X] Bootstrap+Awesome Fonts
+      - [X] App Folder/static folder
+	- [X] fonts: asesome fonts
+	- [X] images: logos +
+	- [X] scripts: JS
+	- [X] styles: css
+	- [X] recommended to separate vendor folders from our own folders
