@@ -140,7 +140,7 @@ return(x1)
 *** Install Cuda on Ubuntu 16.04
     - [ ]
 
-** Date: <2017-03-14 Tue>
+** Date:<2017-03-14 Tue>
 
 *** Django
 **** Create first django project
@@ -150,3 +150,55 @@ return(x1)
      - [ ] Create first project: adjango-admin startproject first_project
        - [ ] 
      - [ ] 
+
+** Date:<2017-03-15 Wed>
+*** AVA model
+    - [ ] Use pandas read all excel files
+** Date:<2017-03-23 Thu>
+*** Django Notes
+    - [X] Create Virtual Environment
+      - [X] conda create --name "env name" django
+      - [X] conda info --envs (check available env names)
+      - [X] source activate "env name"
+    - [X] Create Django Project
+      - [X] django-admin
+      - [X] django-admin startproject "project name"
+    - [X] Run server
+      - [X] cd to project folder
+      - [X] python manage.py runserver
+    - [X] Create Django Application
+      - [X] python manage.py startapp "app name"
+    - [X] Create a View and Map to a URL
+      - [X] Got to "project folder" and setting.py file
+      - [X] find "INSTALLED_APPS" add "app name"
+      - [X] find view.py file, create index function
+      - [X] import view and index function to urls.py file
+      - [X] Map the view and index function to urls.py so that the link to view can be created
+    - [X] Self Challenge
+      - [X] Create a new project called "ProTwo": django-admin startproject ProTwo
+      - [X] Create a new app called "AppTwo": cd ProTwo, then python manage.py startapp AppTwo
+      - [X] Create view index function <em>This is app2</em>
+      - [X] Map view correctly to urls.py
+      - [X] Things to note
+	- [X] Don't forget to add app in the settings.py file
+	- [X] in url.py file, don't forget name =
+    - [X] URL mapping, the purpose is to keep urls.py file clean and modular
+      - [X] include() function from django.conf.urls
+      - [X] add regular expression url('r^first_project/',)
+      - [X] regular expression term should match django application name
+    - [-] Django Templates
+      - [X] Create a template directory
+      - [X] Create subdirectory for each specific app templates
+      - [X] Such as "first_project/templates/first_app"
+      - [X] use Python's os module to dynamically generate the correct file path strings
+	- [X] print(__file__)
+	- [X] print(os.paht.dirname(__file__))
+      - [ ] let Django know of the templates by editing the DIR key inside of the templates dictionary in the settings.py file
+	- [ ] use TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+	- [ ] In settings file, find TEMPLATES and in 'DIR' enter TEMPLATE_DIR
+      - [ ] Create index.html file inside of the templates/first_app directory
+	- [ ] Inside this HTML file, we will insert template tags (Django Template Variables. These tags will allow us to inject CONTENTS into the HTML directly from Django
+	- [ ] Django will be able to inject content into the HTML, use Python code to inject content from a database!
+	  - [ ] {{insert_me}}
+	  - [ ] connect insert_me with django
+	
