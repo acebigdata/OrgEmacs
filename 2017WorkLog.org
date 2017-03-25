@@ -196,9 +196,9 @@ return(x1)
       - [ ] let Django know of the templates by editing the DIR key inside of the templates dictionary in the settings.py file
 	- [ ] use TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 	- [ ] In settings file, find TEMPLATES and in 'DIR' enter TEMPLATE_DIR
-      - [ ] Create index.html file inside of the templates/first_app directory
+      - [-] Create index.html file inside of the templates/first_app directory
 	- [ ] Inside this HTML file, we will insert template tags (Django Template Variables. These tags will allow us to inject CONTENTS into the HTML directly from Django
-	- [ ] Django will be able to inject content into the HTML, use Python code to inject content from a database!
-	  - [ ] {{insert_me}}
+	- [-] Django will be able to inject content into the HTML, use Python code to inject content from a database!
+	  - [X] {{insert_me}}
 	  - [ ] connect insert_me with django
 	
