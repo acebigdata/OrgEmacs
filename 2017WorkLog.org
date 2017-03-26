@@ -275,3 +275,13 @@ return(x1)
       - [ ] Review section 09 again
       - [ ] Finish Challenge
 
+** Date:<2017-03-26 Sun>
+*** Bokeh
+    - [ ] import libraries
+      - [ ] from bokeh.plotting import figure
+      - [ ] from bokeh.io import output_file, show
+    - [ ] four lines of coding
+      - [ ] output_file("filename.html")
+      - [ ] f=figure()
+      - [ ] f.line(x,y) #other proper charting
+      - [ ] show(f)
