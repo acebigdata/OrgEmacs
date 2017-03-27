@@ -285,3 +285,7 @@ return(x1)
       - [ ] f=figure()
       - [ ] f.line(x,y) #other proper charting
       - [ ] show(f)
+      - [ ] f.logo=None # Remove bokeh logo
+** Date: <2017-03-27 Mon>
+*** Flask
+    - [ ] 
