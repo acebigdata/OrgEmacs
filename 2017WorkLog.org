@@ -210,12 +210,30 @@ return(x1)
 	- [X] in index.html file, use Django tags to connect with views.py file
 	- [X] build index(request) function in views.py file to "render" Django tags and realize the connection
 ** Date:<2017-03-25 Sat>
+*** D3 Notes
+    - [X] Refresher
+      - [X] HTML5
+      - [X] SVG: Scalable Vector Graphics
+	- [X] SVG tags sit in body tags or div tags
+	- [X] SVG can only contain graphical elements
+	- [X] D3 adds graphics and text to SVG element and binds data to those elements
+	- [X] Vector vs. Raster/bitmap
+	  - [X] Vector: never lose definition, perfect for my purpose, drawing lines, shapes and fills
+	  - [X] Bitmap: photos composed of small pixels
+      - [X] CSS
+	- [X] handling clashes of styles: more specific definition will be used
+      - [X] JS
+	- [X] browsers must load the D3 file before it loads shapes.js 
+      - [X] DOM
+*** Bokeh
+    - [ ] conda install bokeh
+    - [ ] 
 *** Flask Notes
     - [X] Docker
       - [X] docker-compose up
       - [X] docker-compose stop
       - [X] docker-compose rm -f
-      - [X] docker rmi -f $(docker images -qf dangling = true)
+      - [X] docker rmi -f $(docker images -qf dangling=true)
     - [X] Install Flask Dependencies
       - [X] from flask import Flask
       - [X] function create_app(), Create a Flask application using the app factory pattern
@@ -238,3 +256,22 @@ return(x1)
 	- [X] scripts: JS
 	- [X] styles: css
 	- [X] recommended to separate vendor folders from our own folders
+    - [X] Jinja 2
+      - [X] a designer friendly templating language for python
+      - [X] Top features:
+	- [X] template inheritance
+	- [X] HTML escaping, web security
+	- [X] Speed and efficiency
+	- [X] Flexible and extensibility
+      - [X] Cudos for me:
+	- [X] Add programming constructs to HTML templates
+	- [X] Transfer info from backend Flask server to HTML templates for viewers
+	  - [X] Imagine listing users in an admin dashboard
+	- [X] Separate data from the presentation
+    - [ ] Testing: Looks like should be useful once we have a site built
+      - [ ] Review section 08 again
+      - [ ] Finish Challenge
+    - [ ] CLI Script: to automate the process
+      - [ ] Review section 09 again
+      - [ ] Finish Challenge
+
