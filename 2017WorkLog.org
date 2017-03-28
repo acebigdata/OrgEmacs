@@ -288,4 +288,29 @@ return(x1)
       - [ ] f.logo=None # Remove bokeh logo
 ** Date: <2017-03-27 Mon>
 *** Flask
-    - [ ] 
+    - [ ]
+*** MySQL
+    - [ ] Don't forget the ; at the end of each query
+    - [ ] Connet to Mysql
+      - [ ] mysql --user=root -p, then enter password
+    - [ ] show all databases
+      - [ ] SHOW DATABASES;
+    - [ ] create, delete databases, select database
+      - [ ] CREATE DATABASE database_name;
+      - [ ] DROP DATABASE database_name;
+      - [ ] USE database_name;
+    - [ ] create delete tables
+      - [ ] after selecting database
+      - [ ] CREATE TABLE table_name;
+      - [ ] DROP TABLE table_name;
+*** Bokeh
+    - [ ]
+*** Pandas
+    - [ ]
+** Date: <2017-03-28 Tue>
+*** Bokeh
+    - [X] start services
+      - [X] service nginx restart
+      - [X] service supervisor restart
+      - [X] supervisorctl restart flask
+      - [X] supervisorctl restart bokeh_serve
