@@ -314,3 +314,42 @@ return(x1)
       - [X] service supervisor restart
       - [X] supervisorctl restart flask
       - [X] supervisorctl restart bokeh_serve
+*** Linux
+    - [ ] Remove postgresql
+      - [ ] sudo apt-get --purge remove postgresql postgresql-doc postgresql-common
+** Date: <2017-03-29 Wed>
+*** Deployement
+**** Setup
+    - [ ] DigitalOcean
+    - [ ] Change linux logins
+    - [ ] install softwares
+      - [ ] apt-get install python-virtualenv nginx gunicorn supervisor python-pip
+      - [ ] mkdir /opt/envs
+      - [ ] virtualenv /opt/envs/virtual
+      - [ ] . /opt/envs/virtual/bin/activate
+      - [ ] pip install bokeh
+      - [ ] pip install flask
+      - [ ] pip install gunicorn
+      - [ ] mkdir /var/log/nginx/flask
+      - [ ] mkdir /opt/webapps
+      - [ ] mkdir /opt/webapps/bokehflask
+    - [ ] configuration files
+      - [ ] app files
+      - [ ] default --> 
+      - [ ] flask.conf -->
+      - [ ] bokeh_serve.conf -->
+    - [ ] start services
+      - [ ] service nginx restart
+      - [ ] service supervisor restart
+      - [ ] supervisorctl restart flask
+      - [ ] supervisorctl restart bokeh_serve
+**** Bokeh Server
+     - [ ] python -m bokeh serve **.py
+     - [ ] bokeh serve **.py
+     - [ ] bokeh serve --allow-websocket-origin=localhost:5000 xxx.py
+**** Debug
+     - [ ] /var/log/supervisor
+**** Jupyter to Atom
+     - [ ] select mutiple cells: esc, shift J
+     - [ ] merge: shift m
+
