@@ -353,3 +353,34 @@ return(x1)
      - [ ] select mutiple cells: esc, shift J
      - [ ] merge: shift m
 
+** Date:<2017-03-30 Thu>
+*** MySQL
+    - [ ] mysql --user=root -p
+    - [ ] show databases;
+    - [ ] use database;
+    - [ ] show tables;
+** Date:<2017-03-31 Fri>
+*** AVA Bi-Weekly Updates
+    - [X] Website: Show 138.197.111.0
+      - [X] register
+	- [X] live register demo
+	- [X] Hash encryption
+      - [X] sign in
+      - [X] server configuration <2017-04-04 Tue>
+	- [X] Show 104.236.13.102
+	- [X] Show bitcoin trading example
+	- [X] Address the issue with server error
+    - [X] Functionalities (dropdown boxes, multiple selections, export to excel button)
+      - [X] Database load and manipulation: AppDemo_Datamanipulation
+	- [X] Dabase Selection and Load,
+	- [X] Dropdown box selection,
+	- [X] mutiple selections,
+	- [X] export to excel file
+      - [X] Idea Generation (Bruce's wish)
+	- [X] accordion selection widgets (lumped together)
+      - [X] Visualiztion
+	- [X] Python3 vs. Python2 libraries clash: Prioritizing fixing now
+	- [X] Fix by <2017-04-02 Sun>
+    - [X] Next Step
+      - [X] Visualization libraries
+      - [X] Server configuration
