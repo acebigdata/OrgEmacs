@@ -384,3 +384,11 @@ return(x1)
     - [X] Next Step
       - [X] Visualization libraries
       - [X] Server configuration
+** Date:<2017-04-01 Sat>
+*** Website Structure:
+** Date: <2017-04-05 Wed>
+*** Bokeh
+    - [ ] Widgets
+    - [ ] Bokeh Server
+    - [ ] Embed Bokeh Apps in Website
+    - [ ] Deploy
