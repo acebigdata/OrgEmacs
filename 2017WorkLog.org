@@ -397,7 +397,7 @@ import numpy as np
       - [ ] mkdir /opt/webapps/bokehflask
 
 * 2017-May-Log
-** Date:<2017-05-03 Wed>                                         :emacsconfig:
+** May 5 in NYC <2017-05-03 Wed>                                :emacsconfig:
 - Uninstall emacs
   sudo apt-get remove --auto-remove emacs24 emacs24-lucid emacs24-nox
 - Install emacs
