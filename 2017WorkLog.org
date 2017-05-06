@@ -1,4 +1,3 @@
-
 * 2017-Work-Log
   My work log for 2017
 
@@ -28,16 +27,9 @@
 **** Source Code Blocks
 #+BEGIN_SRC python
 import numpy as np
-x1 = np.random.randn(5,5)
-return(x1)
 #+END_SRC
 
 #+RESULTS:
-|  1.25504941 |  1.31659868 |  -1.0607869 | -1.17213411 |  1.10838667 |
-| -0.33681288 | -0.63341665 | -0.48987775 |  0.13656405 | -0.55864926 |
-|  0.68104102 |   1.5197859 |  0.76629418 |  0.59894311 | -0.42007498 |
-|  0.44924481 |  1.28854033 | -0.38248216 |  0.73985823 |  -0.5910014 |
-|  0.65458797 |  0.67231427 |  -0.6930318 | -0.73751589 |  0.85701368 |
 
 ** Date:<2017-03-02 Thu>
 
@@ -389,6 +381,72 @@ return(x1)
 ** Date: <2017-04-05 Wed>
 *** Bokeh
     - [ ] Widgets
+      - [ ] Udemy
+      - [ ] Loading Database Page
     - [ ] Bokeh Server
     - [ ] Embed Bokeh Apps in Website
     - [ ] Deploy
+** Date: <2017-04-06 Thu>
+*** Deployment
+    - [ ] Virtual environment
+      - [ ] . /opt/envs/virtual/bin/activate
+    - [ ] Create log files
+      - [ ] mkdir /var/log/nginx/flask
+    - [ ] Create webapp folders
+      - [ ] mkdir /opt/webapps
+      - [ ] mkdir /opt/webapps/bokehflask
+
+* 2017-May-Log
+** Date:<2017-05-03 Wed>                                         :emacsconfig:
+- Uninstall emacs
+  sudo apt-get remove --auto-remove emacs24 emacs24-lucid emacs24-nox
+- Install emacs
+  sudo apt-get install emacs
+- customize theme
+  customize-group faces: change fonts, forefront etc.
+  customize-group packages: add melpa as additional package
+  M-x list-packages, search for monokai and install monokai
+- install neo-tree
+  https://www.emacswiki.org/emacs/NeoTree
+- install python IDE
+  https://github.com/wernerandrew/jedi-starter
+- configure Org for code test
+  http://vislab-ccom.unh.edu/~schwehr/rt/9-bash-scripting.html
+*** Operation Research Chapter 2                          :OperationResearch:
+- Phases of OR Study
+  1. Define the problem
+  2. Formulate a math model to present the problem
+  3. Develop a computer-based procedure to derive solutions
+  4. Test the model and refine it as needed
+  5. Prepare for the application of the model
+  6. Implement
+*** Python and Spark                                           :python:spark:
+- Big Data
+  1. use a SQL database to move storage onto hard drive instead of RAM
+  2. use a distributed system to distribute the data to multiple machines/computers
+- Local versus Distributed
+** May 6 in NYC <2017-05-06 Sat>                                        :day:
+*** Org mode
+- Import library, finally was able to use right python version, check the .emacs file
+#+BEGIN_SRC python :results output
+import numpy as np
+print(np.random.randint(1, 100))
+#+END_SRC
+
+#+RESULTS:
+: 31
+
+#+BEGIN_SRC shell :results output
+ls -l
+#+END_SRC
+
+#+RESULTS:
+: total 43
+: -rwxrwx--- 1 root vboxsf  9451 May  5 10:30 2017WorkLog.html
+: -rwxrwx--- 1 root vboxsf 15580 May  6  2017 2017WorkLog.org
+: -rwxrwx--- 1 root vboxsf   716 Mar 10 07:39 admin.org
+: drwxrwx--- 1 root vboxsf     0 May  3 17:05 data
+: -rwxrwx--- 1 root vboxsf 10693 Mar 10 07:39 homework.org
+: -rwxrwx--- 1 root vboxsf   966 Mar 10 07:39 notes.org
+: -rwxrwx--- 1 root vboxsf   714 Mar 10 07:39 ToDo.org
+: drwxrwx--- 1 root vboxsf  4096 May  3 17:05 udemytexfiles
