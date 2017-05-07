@@ -480,8 +480,6 @@ xyplot(1:10 ~ 1:10)
 ls -l
 #+END_SRC
 
-
-
 *** Python Bokeh                                               :python:bokeh:
 - Section 1 Basics
 #+begin_src python :results file
@@ -513,3 +511,11 @@ show(f)
 #+RESULTS:
 [[file:None]]
 
+#+start_src python :results file
+
+#+end_src
+*** RT2011                                                         :research:
+- Link
+http://vislab-ccom.unh.edu/~schwehr/rt/
+- 
+- 
