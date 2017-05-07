@@ -567,7 +567,7 @@ return(np.random.randn(5))
 #+END_SRC
 
 #+RESULTS:
-: None
+| 0.56748746 | 0.40787367 | -0.84858254 | 1.47541833 | -0.45440653 |
 
 *** Udacity 
 - [ ] 
