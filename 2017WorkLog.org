@@ -517,5 +517,33 @@ show(f)
 *** RT2011                                                         :research:
 - Link
 http://vislab-ccom.unh.edu/~schwehr/rt/
-- 
-- 
+** May 7 in NYC <2017-05-07 Sun>                                        :day:
+*** Emacs + Org-mode + Python in reproducible research     :emacs:org:python:
+- link: https://www.youtube.com/watch?v=1-dUkyn_fZA&t=334s
+
+#+BEGIN_SRC python
+import sys
+return(sys.version)
+return(sys.prefix)
+#+END_SRC
+
+#+RESULTS:
+: 3.6.0 |Anaconda 4.3.1 (32-bit)| (default, Dec 23 2016, 12:22:10) 
+: [GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+- inline image
+#+STARTUP: inlineimages
+[[/home/isaac/OrgEmacs/images/org-mode-unicorn-logo.png]]
+
+
+#+BEGIN_SRC shell
+pwd
+#+END_SRC
+
+#+RESULTS:
+: /home/isaac/OrgEmacs
+
+*** Udacity 
+- [ ] 
+- [ ]  
+- [ ]
