@@ -569,7 +569,9 @@ return(np.random.randn(5))
 #+RESULTS:
 : None
 
-*** Udacity 
-- [ ] 
-- [ ]  
-- [ ]
+*** Udacity 3 Recurrent Neural Networks                         :udacity:RNN:
+
+**** Intro to RNN
+
+***** 
+
