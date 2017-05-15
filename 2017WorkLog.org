@@ -876,6 +876,9 @@ data = pd.read_csv("/home/isaac/Dropbox/OPT/factory/factory.csv")
 2. AVA update
 3. Javascript
 4. OPT
+*** Jupyter Notbook/Ipython Dashboard
+- https://www.youtube.com/watch?v=V3VxQGevHCU
+- Will check out: https://www.youtube.com/watch?v=LOWBEYDkn90
 *** Emacs                                                             :emacs:
 **** Emacs config
 - Will not use .emacs file, instead use .init.el file and place it in .emacs.d
@@ -886,6 +889,11 @@ data = pd.read_csv("/home/isaac/Dropbox/OPT/factory/factory.csv")
 - https://www.emacswiki.org/emacs/AutoIndentation
 **** replace
 - M-%, use ! to replace all
+*** VirtualBox                                                   :virtualbox:
+**** How to add spaces
+- http://derekmolloy.ie/resize-a-virtualbox-disk/#prettyPhoto
+**** After adding spaces, the boot will be slow, use below
+- https://superuser.com/questions/1084147/virtualbox-very-slow-boot-time
 *** Bokeh Notes                                                :python:bokeh:
 **** Column Data Source
 1. CDS is created to easily use pandas dataframe
@@ -904,8 +912,6 @@ print(flowers[:5])
 
 2. 
 **** Hover
-*** VirtualBox                                                   :virtualbox:
-**** How to add spaces
-- http://derekmolloy.ie/resize-a-virtualbox-disk/#prettyPhoto
-**** After adding spaces, the boot will be slow, use below
-- https://superuser.com/questions/1084147/virtualbox-very-slow-boot-time
+**** Bokeh Widgets and Server
+- Widgets interactivity has to be executed in the bokeh server
+- bokeh serve appname --port 5007 (or any other port if port is taken)
