@@ -915,3 +915,133 @@ print(flowers[:5])
 **** Bokeh Widgets and Server
 - Widgets interactivity has to be executed in the bokeh server
 - bokeh serve appname --port 5007 (or any other port if port is taken)
+** May 14 in NYC <2017-05-14 Sun>                                       :day:
+*** Flask Tutorial
+- [[http://blog.thedataincubator.com/2015/09/painlessly-deploying-data-apps-with-bokeh-flask-and-heroku/][Deploy Data App with Bokeh, Flask and Heroku]]
+** May 15 in NYC <2017-05-15 Mon>                                       :day:
+*** Org-Mode
+**** Outliner
+**** Mark up
+***** *Bold*, /italic/, /test/, _test_, =verbatim=
+**** Bulleted list
+- list1
+- list2
+**** links
+- External links to website
+  - C-c C-l: enter links and description
+  - C-c C-o: open links
+[[http://www.google.com][Google]]
+
+- Internal links to files
+
+**** Tables
+|  A |  B |
+|----+----|
+| 12 | 79 |
+| 34 | 45 |
+
+**** Export to other format
+#+Title: A Gentle Intro to Org-Mode
+#+Options: author:nil date:nil email:nil creator:nil timestamp:nil
+
+**** Source code
+- C-c ' to editor
+- C-c ' to quit editor
+#+BEGIN_SRC python :results output :exports both
+  import numpy as np
+  print(np.random.random(10))
+#+END_SRC
+
+#+RESULTS:
+: [ 0.08153801  0.08220896  0.28221283  0.45509195  0.83788436  0.13067804
+:   0.52464921  0.28018272  0.107593    0.17557978]
+
+**** LaTex integration
+- Characters: \alpha \rightarrow \beta
+- $O(n \log n)$
+\begin{align*}
+3 * 2 + &= 6 + 1 \\
+&= 7
+\end{align*}
+
+**** Literate Programming
+- set up all config in an org model file
+- babel it with emacs-lisp
+- only one line of code in the .init.el file
+  - (org-babel-load-file "~/.emacs.d/configuration.org")
+**** Todo Stuffs
+***** TODO explain todo lists
+      DEADLINE: <2017-05-17 Wed>
+***** TODO cycle through states
+***** DONE (S-left)<2017-05-14 Sun>
+**** Export
+***** [[http://orgmode.org/manual/Export-settings.html#Export-settings][Official Export Settings]]
+***** [[https://github.com/marsmining/ox-twbs][Export org-mode docs as HTML compatible with Bootstrap]]
+***** [[https://jgkamat.github.io/blog/website1.html][Create Blog from Org]]
+*** AVA
+**** Codes
+**** User Management
+**** Data
+** May 16 in NYC <2017-05-16 Tue>                                       :day:
+*** AVA Webapp Core Apps
+**** Select Database
+1. Select which folder on the server to pull data
+2. All the following data will be encapsuled into this one
+**** Select Table/Metric
+1. Select which metric to pull
+2. Download CSV
+3. Further selections include
+|---------+----------------------------|
+| Region  | e.g. North America, Europe |
+|---------+----------------------------|
+| Country | e.g. USA, Germany          |
+|---------+----------------------------|
+| Sector  | e.g. Auto OEM              |
+|---------+----------------------------|
+**** Charts
+1. Select metrics (Multiple Selection)
+2. Enter Company Names
+3. Populate Charts
+**** Tables
+*** Bokeh
+**** Widget Document
+1. [[http://bokeh.pydata.org/en/latest/docs/user_guide/interaction/widgets.html#multiselect][Bokeh Widget]]
+2. 
+** May 17 in NYC <2017-05-17 Wed>                                       :day:
+*** TODO AVA Core Apps
+*** TODO Data Update
+*** Emacs
+**** Undo: C-_
+**** Redo changes: C-g C-_
+**** Repeat: C-u number action
+***** print $ for 20 times
+***** $$$$$$$$$$$$$$$$$$$$
+** May 19 in NYC <2017-05-19 Fri>                                       :day:
+*** AVA
+*** Linux
+**** count number of files in a dir
+***** ls -F |grep -v / | wc -l
+**** Given two directory trees, find out which files differ:
+***** diff --brief -r dir1/ dir2/
+***** If nothing prints out, means two dirs have same files
+***** The differences will be printed out
+** May 20 in NYC <2017-05-20 Sat>                                       :day:
+*** TODO AVA webapp
+**** Optimize code
+***** Learning from examples
+*** TODO Optimization
+*** TODO Deep Learning Nano Degree
+**** Numpy Refresher
+#+BEGIN_SRC ipython :session
+  %matplotlib inline
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  def foo(x):
+      return x + 9
+
+  [foo(x) + 7 for x in range(7)]
+#+END_SRC
+
+#+RESULTS:
+| 16 | 17 | 18 | 19 | 20 | 21 | 22 |

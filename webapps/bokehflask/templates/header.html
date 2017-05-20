@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Applied Value Analytics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+        <link rel="shortcut icon" href="{{url_for('static', filename='favicons.png')}}">
+
+        <header>
+            <!-- logo stays here -->
+            <div class="navbar-header">
+              <a class="navbar-brand">
+                  <img href="http://www.appliedvaluegroup.com" style="max-width:240px; margin-top: -7px" src="{{url_for('static', filename='images/logo.png')}}" alt="Applied Value Analytics">
+              </a>
+            </div>
+
+            <div class="container-fluid">
+
+                <div>
+                    <!-- navbar on the right -->
+                    <ul class="nav navbar-nav navbar-right">
+                    <!-- insert modals -->
+
+              		    <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+                  			<h5>
+                                {% if session.logged_in %}
+                                    <a href="/logout/"><span class="glyphicon glyphicon-log-out"></span> Logout&nbsp;&nbsp;&nbsp;</a>
+                                {% else %}
+                          			<a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login&nbsp;&nbsp;&nbsp;</a>
+                                    <a href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a>
+                                {% endif %}
+                            </h5>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+    <body>
+        <!-- loading JQuery -->
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- loading javascript -->
+        <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+        <div class="border-row" style="width:100%; margin-bottom:15px;">
+            <div class="container" style="min-height:100% width:100%">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-info alert-dissmissible" role="alert">
+                                <button type="button" class = "close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% block body %} {% endblock %}
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
