@@ -1032,16 +1032,19 @@ print(flowers[:5])
 *** TODO Optimization
 *** TODO Deep Learning Nano Degree
 **** Numpy Refresher
-#+BEGIN_SRC ipython :session
+#+BEGIN_SRC ipython :session :file /home/isaac/Dropbox/OrgEmacs/images/image.svg :exports both
   %matplotlib inline
+  %config InlineBackend.figure_format = 'svg'
   import matplotlib.pyplot as plt
   import numpy as np
 
   def foo(x):
-      return x + 9
+      yereturn x + 9
 
   [foo(x) + 7 for x in range(7)]
+
+  plt.hist(np.random.randn(1000), bins=100)
 #+END_SRC
 
 #+RESULTS:
-| 16 | 17 | 18 | 19 | 20 | 21 | 22 |
+[[file:/home/isaac/Dropbox/OrgEmacs/images/image.svg]]
