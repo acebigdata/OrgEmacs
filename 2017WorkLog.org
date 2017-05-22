@@ -1447,3 +1447,10 @@ array([[[[ 1,  2,  3]],
 #+RESULTS:
 ****** Bokeh Server!!!
 ******* Need to work in separate files
+** May 21 in NYC <2017-05-21 Sun>                                       :day:
+*** Bokeh Revelation
+**** Get Data
+**** Make Plot
+**** Update Plot/Callback
+***** All changes shall happen here
+**** Layout
