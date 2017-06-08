@@ -2312,4 +2312,10 @@ Name: 0.2, dtype: float64
 **** Export Data
 *** 
 ** June 8 in NYC <2017-06-08 Thu>                                       :day:
-*** 
+*** Github revisited
+**** new repo -> git init
+**** add .gitignore
+**** create repo on github
+**** git remote add origin git@github.com:username/reponame.git
+**** git push -u origin master
+*** Algorithms in Python
