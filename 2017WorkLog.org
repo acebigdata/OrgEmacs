@@ -1,7 +1,10 @@
+#+setupfile: ~/Dropbox/OrgEmacs/themes/theme-readtheorg.setup
+#+OPTIONS: num:nil whn:2 toc:4 H:6
+
 * 2017-Work-Log
   My work log for 2017
 
-* 2017-March-log
+* 2017-March-April-log
   
   Work log for march 2017
 
@@ -25,7 +28,7 @@
      - C-c . <2017-03-01 Wed>
 
 **** Source Code Blocks
-#+BEGIN_SRC python
+#+BEGIN_SRC python :results output
 import numpy as np
 #+END_SRC
 
@@ -429,13 +432,15 @@ import numpy as np
 ** May 6 in NYC <2017-05-06 Sat>                                        :day:
 *** Org mode
 - Import library, finally was able to use right python version, check the .emacs file
-#+BEGIN_SRC python :results output
+#+BEGIN_SRC ipython :session
 import numpy as np
-print(np.random.randint(1, 100))
+np.random.randint(1, 100)
+import sys
+sys.version
 #+END_SRC
 
 #+RESULTS:
-: 18
+: 59
 
 1. Python
 #+begin_src python :results file
@@ -626,17 +631,17 @@ return pred
 : 0.9800000000000001
 
 ** May 8 in NYC <2017-05-08 Mon>                                        :day:
-*** TODO Tasks                                                         :todo:
-**** TODO Optimization<2017-05-12 Fri>
-     - [ ] review the fundamentals
-     - [ ] review WB example models
-     - [ ] Build analytics applets
-       - [ ] Purchasing: light steel opt
-       - [ ] Pricing
-       - [ ] Inventory
-       - [ ] Logistics
-       - [ ] Portfolio
-**** TODO AVA webapp<2017-05-14 Sun>
+*** DONE Tasks                                                         :todo:
+**** DONE Optimization<2017-05-12 Fri>
+     - [X] review the fundamentals
+     - [X] review WB example models
+     - [X] Build analytics applets
+       + [X] Purchasing: light steel opt
+       + [X] Pricing
+       + [X] Inventory
+       + [X] Logistics
+       + [X] Portfolio
+**** DONE AVA webapp<2017-05-14 Sun>
      - [ ] data refresh
      - [ ] Additional features
        - [ ] Data cleansing
@@ -804,7 +809,7 @@ data = pd.read_csv("/home/isaac/Dropbox/OPT/factory/factory.csv")
 **** Embedding Bokeh Apps in Websites
 **** Deployment
 ** May 11 in NYC <2017-05-11 Thu>                                       :day:
-*** TODO Tasks
+*** DONE Tasks
 **** AVA update
 ***** Finish update slide
 **** OPT model
@@ -1026,6 +1031,7 @@ print(flowers[:5])
 ***** If nothing prints out, means two dirs have same files
 ***** The differences will be printed out
 **** readlink -f filename
+***** Getting the full path 
 ** May 20 in NYC <2017-05-20 Sat>                                       :day:
 *** TODO AVA webapp
 **** Optimize code
@@ -1033,7 +1039,7 @@ print(flowers[:5])
 *** TODO Optimization
 *** TODO Deep Learning Nano Degree
 *** Testing op-python
-#+BEGIN_SRC ipython :session :file /home/isaac/Dropbox/OrgEmacs/images/image.svg :exports both
+#+BEGIN_SRC ipython :session :file /home/isaac/Documents/image.svg :exports both
   %matplotlib inline
   %config InlineBackend.figure_format = 'svg'
   import matplotlib.pyplot as plt
@@ -1048,7 +1054,7 @@ print(flowers[:5])
 #+END_SRC
 
 #+RESULTS:
-[[file:/home/isaac/Dropbox/OrgEmacs/images/image.svg]]
+[[file:/home/isaac/Documents/image.svg]]
 *** Udacity Matrix and Numpy Refresher
 ****** Types of Data
 ******* Scalar: zero dimensions
@@ -1454,3 +1460,856 @@ array([[[[ 1,  2,  3]],
 **** Update Plot/Callback
 ***** All changes shall happen here
 **** Layout
+** May 22 in NYC <2017-05-22 Mon>                                       :day:
+*** TODO Udacity Deep Learning                         :udacity:deeplearning:
+**** Numpy Refresher
+***** array operations
+#+BEGIN_SRC ipython :session
+  import sys
+  sys.version
+#+END_SRC
+ #+BEGIN_SRC python :session
+     import numpy as np
+     #this block will replace the list
+     # Pure python code
+     values = list(range(1,5))
+     for i in range(len(values)):
+	 values[i] += 5
+     values
+
+     # this block won't change the list
+     values_2 = list(range(1,10))
+     for item in values_2:
+	 item += 5
+
+     values_2
+     # Numpy code
+     values_3 = np.array(values)+5
+     # now values_3 is an ndarray that holds [6,7,8,9,10]
+     values_3
+
+     a = np.array([[1,2],[3,4]])
+     a.shape
+ #+END_SRC
+
+ #+RESULTS:
+ | 2 | 2 |
+***** Matrix Product
+#+BEGIN_SRC python :session
+  import numpy as np
+
+  arr1 = np.array([0,2,4,6])
+  arr2 = np.array([1,7,13,19])
+
+  arr3 = np.multiply(arr1, arr2)
+
+  arr3
+
+  var = np.dot(arr1, arr2)
+  var
+#+END_SRC
+
+#+RESULTS:
+: 180
+***** Dot Product
+#+BEGIN_SRC python :session
+  import numpy as np
+
+  mat1 = np.matrix([[0,2,4,6],[8,10,12,14]])
+  mat2 = np.matrix([[1,3,5],[7,9,11],[13,15,17],[19,21,23]])
+
+  var = np.dot(mat1, mat2)
+
+  var
+#+END_SRC
+
+#+RESULTS:
+| 180 | 204 | 228 |
+| 500 | 588 | 676 |
+***** number of cols on left = number of rows on the right
+***** matrix mult: a table of dot products
+***** It turns out that the results of dot and matmul are the same if the matrices are two dimensional.
+#+BEGIN_SRC python :session
+  import numpy as np
+
+  a = np.array([[1,2,3,4],[5,6,7,8]])
+  b = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
+
+  c = np.matmul(a, b)
+  c
+
+  d = np.dot(a,b)
+  d
+#+END_SRC
+
+#+RESULTS:
+|  70 |  80 |  90 |
+| 158 | 184 | 210 |
+***** matrix transpose can be used safely in a matrix multiplication if the data in both original matrices is arranged as rows
+
+#+BEGIN_SRC ipython :session
+  import numpy as np
+  m = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
+
+  print(m)
+  print(m.T)
+  print(np.transpose(m))
+
+  inputs = np.array([[-0.27,  0.45,  0.64, 0.31]])
+
+  weights = np.array([[0.02, 0.001, -0.03, 0.036], \
+      [0.04, -0.003, 0.025, 0.009], [0.012, -0.045, 0.28, -0.067]])
+
+  print(inputs.min())
+
+  print(np.matmul(inputs, weights.T))
+
+  print(np.matmul(weights, inputs.T))
+#+END_SRC
+
+#+RESULTS:
+**** DONE Conda Virtual Env
+***** Create an environment
+****** conda create -n (env_name) python=3: create a conda environment specifying python version is 3
+****** source activate (env_name): activate environment
+****** conda list: list all the installed packages
+***** list all environment
+****** conda info --envs
+***** Remove an environment
+****** conda remove --name (env_name) --all
+***** Export to a yaml file
+****** conda env export > environment.yaml
+***** Load yaml file
+****** conda env create -f environment.yaml
+**** DONE Application
+***** [[file:~/Dropbox/DeepLearning/fast-style-transfer/style-transfer-out/][Style Transfer]]
+***** Deep Traffic
+****** [[http://selfdrivingcars.mit.edu/][Self-Driving Car Course at MIT]]
+***** [[https://github.com/yenchenlin/DeepLearningFlappyBird][Flappy Bird]]
+***** Books
+****** [[file:~/Dropbox/DeepLearning/Book/Grokking_Deep_Learning_v6_MEAP.pdf][Grokking Deep Learning]]
+****** [[http://neuralnetworksanddeeplearning.com/index.html][Neural Networks and Deep Learning]]
+****** [[http://www.deeplearningbook.org/][MIT Deep Learning Book]]
+**** TODO Regression                                                   :todo:
+*** TODO AVA Functions
+**** [[http://apps.appliedvalueanalytics.com][Current Link]]
+**** TODO Data Cleansing
+***** DONE Added tax rate
+***** DONE Changed NOPAT, NOPAT%
+***** DONE Add WACC Page
+***** DONE Add ROIC
+***** DONE Adde EVA
+**** Idea Generation
+**** Company Charts integrate to load data
+**** Full, low, high tables
+**** User management
+***** Refer to the flask class again
+***** [[https://www.youtube.com/watch?v=ItzVQGht-Es&list=PLQVvvaa0QuDc_owjTbIY4rbgXOFkUYOUB&index=15][User Registration]]
+*** TODO Optimization
+**** Model Validation
+*** Emacs
+**** [[http://ergoemacs.org][Ergo Emacs]]
+** May 23 in NYC <2017-05-23 Tue>                                       :day:
+*** TODO Udacity Deep Learning                         :udacity:deeplearning:
+**** TODO Regression
+***** [[http://pandas.pydata.org/pandas-docs/stable/10min.html#min][10 Minutes to Pandas]]
+#+BEGIN_SRC ipython :session
+  import sys
+  sys.version
+#+END_SRC
+
+#+RESULTS:
+: 3.6.0 |Anaconda 4.3.1 (64-bit)| (default, Dec 23 2016, 12:22:00) \n[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+#+BEGIN_SRC ipython :session :file /home/isaac/Documents/image.svg :exports both
+  %matplotlib inline
+  %config InlineBackend.figure_format = 'svg'
+  import pandas as pd
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  # creating a series
+
+  ts = pd.Series(np.random.randn(1000), index=pd.date_range("1/1/2010", periods = 1000))
+  ts = ts.cumsum()
+  ts.plot()
+#+END_SRC
+
+#+RESULTS:
+[[file:/home/isaac/Documents/image.svg]]
+
+***** [[http://scikit-learn.org/stable/tutorial/basic/tutorial.html][Intro to Scikit-learn]]
+***** [[http://matplotlib.org/users/pyplot_tutorial.html][Matplotlib]]
+*** TODO AVA Functions
+**** TODO Select Data
+**** TODO Data table
+**** TODO Charts
+*** TODO Optimization
+**** Build a donut chart for current situation
+
+*** Manjaro                                                            :arch:
+**** install: sudo pacman -S [software name]
+**** sync and update: sudo pacman -Syyu
+*** Emacs                                                             :emacs:
+**** reload .init.el file without restarting
+***** M-x eval-buffer (when emacs is open)
+***** M-x load-file RET ~/.emacs.d/init.el
+**** [[https://github.com/gregsexton/ob-ipython/][ob-ipython]]
+****** ipython in org-mode
+**** [[https://www.youtube.com/watch?v=SzA2YODtgK4][Best Org-Mode Video on Youtube]]
+** May 24 in NYC <2017-05-24 Wed>                                       :day:
+*** TODO AVA Functions
+*** TODO Optimization
+#+BEGIN_SRC ipython :session :exports both
+  import pandas as pd
+  import numpy as np
+
+  from pulp import *
+
+  data_simple = "/home/isaac/Dropbox/OPT/00_steel_info/data_simple.csv"
+  df = pd.read_csv(data_simple)
+  ## Function to Convert Wide DF to Long DF
+  def gather(df, key, value, cols):
+      id_vars = [col for col in df.columns if col not in cols]
+      id_values = cols
+      var_name = key
+      value_name = value
+      return pd.melt(df, id_vars, id_values, var_name, value_name)
+
+  suppliers = ['TKS', 'Arcelor','Salzgitter']
+  df_new = gather(df, "Suppliers", "Quotes", suppliers)
+
+  quotes = df_new["Quotes"]
+  volumes = df_new["Volume"]
+  supplier = df_new["Suppliers"]
+
+  decision_variables = []
+
+  for rownum, row in df_new.iterrows():
+      variable = str('x'+str(rownum))
+      variable = pulp.LpVariable(str(variable), cat="Binary")
+      decision_variables.append(variable)
+
+  df_new["Decision Variable"] = decision_variables
+
+  dec_vars = df_new["Decision Variable"]
+
+  prob = pulp.LpProblem("Steel OPT", pulp.LpMinimize)
+  total_npv = np.sum(volumes * quotes * dec_vars)
+
+  prob += total_npv
+
+  prob += dec_vars[0] + dec_vars[3] + dec_vars[6] == 1
+  prob += dec_vars[1] + dec_vars[4] + dec_vars[7] == 1
+  prob += dec_vars[2] + dec_vars[5] + dec_vars[8] == 1
+
+  opt_results = prob.solve()
+
+  #reorder results
+  variable_name = []
+  variable_value = []
+
+  for v in prob.variables():
+	  variable_name.append(v.name)
+	  variable_value.append(v.varValue)
+
+  df_new["Decision Results"] = variable_value
+
+  win_data = df_new[df_new["Decision Results"] ==1]
+  win_data
+
+  prob
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Steel OPT:
+MINIMIZE
+2092090*x0 + 150875*x1 + 38764*x2 + 2204950*x3 + 148625*x4 + 54120*x5 + 2466200*x6 + 140875*x7 + 42944*x8 + 0
+SUBJECT TO
+_C1: x0 + x3 + x6 = 1
+
+_C2: x1 + x4 + x7 = 1
+
+_C3: x2 + x5 + x8 = 1
+
+VARIABLES
+0 <= x0 <= 1 Integer
+0 <= x1 <= 1 Integer
+0 <= x2 <= 1 Integer
+0 <= x3 <= 1 Integer
+0 <= x4 <= 1 Integer
+0 <= x5 <= 1 Integer
+0 <= x6 <= 1 Integer
+0 <= x7 <= 1 Integer
+0 <= x8 <= 1 Integer
+#+end_example
+** May 25 in NYC <2017-05-25 Thu>                                       :day:
+*** TODO Optimization & Prep for Updates
+*** TODO AVA Webapp
+*** TODO IT Structure
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Options     | Description                                                                | Pro                  | Cons                         |  ETA(wk) | Gap    |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Pure Excel  | 1. Use Gus Excel Template.                                                 | Simple, Done;        | High Admin Costs             |        0 | None   |
+|             | 2. Excel only Aggregation, no vba involved                                 | No need for AVA      |                              |          |        |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Excel VBA 1 | 1. Users use regular excel template;                                       | Simple;              | Submit process not automated |        1 | None   |
+|             | 2. Admin aggregate with built in macros                                    | limited AVA support  |                              |          |        |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Excel VBA 2 | 1. Users use excel vba with click button/send to sharepoint                | Moderately Simple;   | None                         |      1.5 | None   |
+|             | 2. Admin use excel master vba to grab files from dropbox and aggregate     | Fair AVA support     |                              |          |        |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Excel + Web | 1. User form submit request on web                                         | Relatively automated | Deployment                   |   1+2+1+ | JS     |
+|             | 2. Data stored in sqlite on server                                         |                      | Javascript                   |          | JQuery |
+|             | 3. Javascript handles submit code on the front, Python connets with sqlite |                      |                              |          | Docker |
+|             | 4. Admin can pull aggregated data to excel and manipulate in excel         |                      |                              |          |        |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+| Pure Web    | 1. Similar to the previous option, admin can also see results on web       | Automated, packaged  | Deployment                   |          | JS     |
+|             |                                                                            |                      | JS                           |          | JQuery |
+|             |                                                                            |                      | Front End design             | 1.5+2+1+ | Design |
+|             |                                                                            |                      |                              |          | Docker |
+|-------------+----------------------------------------------------------------------------+----------------------+------------------------------+----------+--------|
+** May 26 in NYC <2017-05-26 Fri>                                       :day:
+*** TODO Optimization Applets
+**** [[file:~/Dropbox/OPT/optimization.org][Optimization Org File]]
+
+*** TODO AVA webapp
+*** TODO IT requests
+*** TODO Pandas Refresher
+**** [[https://www.udemy.com/data-analysis-with-pandas/learn/v4/overview][Data Analysis with Pandas and Python]]
+**** [[https://www.udemy.com/data-analysis-in-python-with-pandas/learn/v4/overview][Data Analysis in Python with Pandas]]
+**** [[https://www.udemy.com/learning-python-for-data-analysis-and-visualization/learn/v4/overview][Learning Python for Data Analysis and Visualization]]
+**** [[https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/learn/v4/overview][Python for Data Science and Machine Learning Bootcamp]]
+*** TODO Bokeh Refresher
+**** [[https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh][Datacamp Bokeh]]
+**** [[https://www.youtube.com/watch?v=LXLQTuSSKfY][Bokeh SciPy]]
+**** [[https://www.youtube.com/watch?v=vWUPs4fNmKQ][Bokeh Strata NYC 2016]]
+**** [[https://www.udemy.com/python-bokeh/learn/v4/overview][Udemy Bokeh]]
+*** Anaconda Remove
+**** conda istall anaconda-clean   # install the package anaconda clean
+**** anaconda-clean --yes           # clean all anaconda related files and directories
+**** rm -rf ~/anaconda3             # removes the entire anaconda directory
+**** rm -rf ~/.anaconda_backup       # anaconda clean creates a back_up of files/dirs, remove it
+**** conda list; #cmd shouldn't respond after the clean up
+*** TODO Javascript
+*** PuLP
+**** [[file:~/Dropbox/OPT/PuLP/PulP%20Intro.pdf][Book]]
+*** TODO Docker
+**** [[https://www.udemy.com/the-docker-for-devops-course-from-development-to-production/learn/v4/t/lecture/3937984?start=0][Docker Udemy]]
+***** Install Docker
+****** [[http://apt.dockerproject.org/repo/pool/main/d/docker-engine/][Docker Enging]]
+****** Use 1.83 trusty
+****** Install docker dependencies: sudo apt-get install libapparmor1 aufs-tools ca-certificates
+****** sudo dpkg -i [docker image]
+****** grand su permission: sudo usermod -aG docker isaac
+****** reboot
+***** Docker Compose
+****** [[https://github.com/docker/compose/releases][Docker Compose Github Repo]]
+****** curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-Linux-x86_64 > /tmp/docker-compose
+****** cd /tmp/
+****** chmod +x docker-compose # Make docker-compose executable
+****** sudo mv docker-compose /usr/local/bin/ #move the file to local/usr/bin
+***** Run Docker
+****** docker run --rm busybox:latest /bin/echo "Hello World!"
+****** busybox is an extremely small linux distro
+****** docker --help see all the commands
+****** docker images: check all the images downloaded
+****** docker ps: check all the running containers
+****** docker run busybox:latest /bin/echo "Hello World!"
+****** docker ps -a : will show all the containers
+****** docker rm [container id] will remove the containers manually
+****** docker run -it --rm busybox:latest: check what's inside the busybox image -it means run it interactively
+****** C-d will exit the docker run
+****** docker rmi [image id] will delete existing images
+****** docker images are imutable
+***** Docker Registry
+****** Similar to github
+***** Dockerized web app
+****** Set up a proj directory
+***** Dockerized Flask app
+****** [[file:~/Dropbox/Projects/][Project Folder Location]]
+****** Project Scaffolding
+└── MobyDock
+    └── mobydock
+        ├── config
+        │   ├── __init__.py
+        │   └── [[file:~/Dropbox/Projects/MobyDock/mobydock/config/settings.py][settings.py]]
+        ├── docker-compose.yml
+        ├── Dockerfile
+        ├── instance
+        │   ├── __init__.py
+        │   └── settings.py.production_example
+        ├── mobydock
+        │   ├── [[file:~/Dropbox/Projects/MobyDock/mobydock/mobydock/app.py][app.py]]
+        │   ├── __init__.py
+        │   ├── static
+        │   │   ├── logo.png
+        │   │   └── main.css
+        │   └── templates
+        │       └── layout.html
+        └── requirements.txt
+****** Dockerfile
+******* A recipe to build the docker image
+******* [[file:~/Dropbox/Projects/MobyDock/mobydock/Dockerfile][Dockerfile Details]]
+****** Requirements file
+******* [[file:~/Dropbox/Projects/MobyDock/mobydock/requirements.txt][Requirements file details]]
+****** Git ignore file
+******* [[file:~/Dropbox/Projects/MobyDock/mobydock/.gitignore][.gitignore file details]]
+****** Docker ignore file
+******* [[file:~/Dropbox/Projects/MobyDock/mobydock/.dockerignore][.dockerignore file details]]
+****** Docker-compose
+******* [[file:~/Dropbox/Projects/MobyDock/mobydock/docker-compose.yml][docker-compose]]
+******* docker-compose up
+****** Create Database
+******* docker exec mobydock_postgres_1 createdb -U postgres mobydock
+******* docker exec mobydock_postgres_1 psql -U postgres -c "CREATE USER mobydock WITH PASSWORD 'yourpassword'; GRANT ALL PRIVILEGES ON DATABASE mobydock to mobydock;"
+** May 27 in NYC <2017-05-27 Sat>                                       :day:
+*** Docker
+*** HTML+CSS+JS
+*** Python Numpy
+*** Python Pandas
+*** Python Bokeh
+*** R
+**** [[https://www.datascienceriot.com/how-to-install-r-in-linux-ubuntu-16-04-xenial-xerus/kris/][Install R and R Studio on Ubuntu]]
+**** [[http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-R.html][Use R in Emacs Org-Mode]]
+#+begin_src R :session
+library(lattice)
+xyplot(1:10 ~ 1:10)
+#+end_src
+
+#+RESULTS:
+*** [[https://www.lynda.com/Flask-tutorials/Learning-Flask/521231-2.html][Flask]]
+*** [[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04][PostgreSQL]]
+**** sudo -u postgres createdb databasename
+**** to access a postgres prompt: sudo -i -u postgres
+**** psql
+**** connet to a database: \c databasename
+**** to quit: \q
+** May 28 in NYC <2017-05-28 Sun>                                       :day:
+*** [[https://www.youtube.com/watch?v=ZdDOauFIDkw][Python Regular Expression]]
+#+BEGIN_SRC ipython :session
+  import re
+  print(re.split(r'[a-z]*(@appliedvalue.com)', "isaac.zhou@appliedvalue.com"))
+#+END_SRC
+
+#+RESULTS:
+*** Postgresql
+**** [[https://help.ubuntu.com/community/PostgreSQL#fe_sendauth:_no_password_supplied][Need to set up the password]]
+*** OrgMode
+**** Yasnippet
+**** Beautify Export
+***** [[https://github.com/fniessen/org-html-themes][org-html-themes(downloaded)]]
+***** [[http://demo.thi.ng/org-spec/][A Very Good Example]]
+*** Pandas
+*** Numpy
+**** Create Arrays from Python Structure
+***** Check Numpy Version
+#+BEGIN_SRC ipython :session :file  :exports both
+   import numpy as np
+   np.__version__
+#+END_SRC
+
+#+RESULTS:
+: 1.11.3
+
+***** Create From a Python List
+#+BEGIN_SRC ipython :session :file  :exports both
+  my_list = [-17,0,4,5,9]
+  my_array = np.array(my_list)
+  my_list
+  my_list * 10
+  my_array
+  my_array * 10
+#+END_SRC
+
+#+RESULTS:
+: array([-170,    0,   40,   50,   90])
+
+***** Create From a Tuple
+#+BEGIN_SRC ipython :session :file  :exports both
+  my_tuple = (14,3.54,5+7j)
+  np.array(my_tuple)
+  #Note the promotion of the data type
+#+END_SRC
+
+#+RESULTS:
+: array([ 14.00+0.j,   3.54+0.j,   5.00+7.j])
+
+***** Difference between Python and Numpy Data Structure
+#+BEGIN_SRC ipython :session :file  :exports both
+  print(my_tuple * 6)
+  print(np.array(my_tuple) * 6)
+#+END_SRC
+
+#+RESULTS:
+
+**** Intrinsic Numpy Array Creation: 
+***** Arange
+#+BEGIN_SRC ipython :session :file  :exports both
+   np.arange(7)
+   np.arange(3,19,3)
+   len(np.arange(3,19,3))
+   np.arange(3,19,3).size
+#+END_SRC
+
+#+RESULTS:
+: 6
+
+***** linspace, zeros, ones
+#+BEGIN_SRC ipython :session :file /media/sf_host/Dropbox/OrgEmacs/images/image.png :exports both
+  %matplotlib inline
+  import matplotlib.pyplot as plt
+  import numpy as np
+
+  x = np.linspace(8,12,100)
+  y = np.cos(x)
+
+  plt.plot(x, y)
+  plt.show()
+#+END_SRC
+
+#+RESULTS:
+[[file:/media/sf_host/Dropbox/OrgEmacs/images/image.png]]
+#+BEGIN_SRC ipython :session :file /media/sf_host/Dropbox/OrgEmacs/images/image2.png  :exports both
+  import numpy as np
+  import matplotlib.pyplot as plt
+  %matplotlib inline
+
+  x = np.linspace(0,10,200)
+  y = np.sin(x)
+
+  plt.plot(x,y)
+#+END_SRC
+
+#+RESULTS:
+[[file:/media/sf_host/Dropbox/OrgEmacs/images/image2.png]]
+#+BEGIN_SRC ipython :session :file /media/sf_host/Dropbox/OrgEmacs/images/1.png :exports both
+  x = np.ones(100)
+  y = np.zeros(100)
+  plt.plot(x)
+  plt.plot(y)
+#+END_SRC
+
+#+RESULTS:
+[[file:/media/sf_host/Dropbox/OrgEmacs/images/1.png]]
+**** Index, Slice and Iterate
+***** Slice Arrays
+#+BEGIN_SRC ipython :session  :exports both
+  import numpy as np
+  my_vec = np.array([-17, -4, 0, 2, 21, 37, 105])
+  my_vec[-3]
+  my_arr = np.arange(36)
+  my_arr.shape=(6,6)
+  my_arr
+  my_arr_3d = np.arange(36)
+  my_arr_3d.shape = (4,3,3)
+  my_arr_3d[3][2][1]
+#+END_SRC
+
+#+RESULTS:
+: 34
+***** Boolean Mask Arrays
+#+BEGIN_SRC ipython :session :exports both
+  import numpy as np
+  my_vec = np.arange(107)
+  zero_mod_7_mask = (my_vec%7)==0
+  # Python way
+  zero_mod_7 = my_vec[zero_mod_7_mask]
+  zero_mod_7
+
+  # Numpy logical function Faster on bigger dataset
+  zero_mod_7_np = my_vec[np.logical_and(my_vec, zero_mod_7_mask)]
+  zero_mod_7_np
+#+END_SRC
+
+#+RESULTS:
+: array([  7,  14,  21,  28,  35,  42,  49,  56,  63,  70,  77,  84,  91,
+:         98, 105])
+***** Broadcasting
+#+BEGIN_SRC ipython :session  :exports both :results output
+  import numpy as np
+  my_3d_arr = np.arange(70)
+  my_3d_arr.shape=(2,7,5)
+  print(my_3d_arr)
+  print(my_3d_arr.shape)
+  print(my_3d_arr.ndim)
+  print(my_3d_arr.size)
+  my_3d_arr.dtype
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+[[[ 0  1  2  3  4]
+  [ 5  6  7  8  9]
+  [10 11 12 13 14]
+  [15 16 17 18 19]
+  [20 21 22 23 24]
+  [25 26 27 28 29]
+  [30 31 32 33 34]]
+
+ [[35 36 37 38 39]
+  [40 41 42 43 44]
+  [45 46 47 48 49]
+  [50 51 52 53 54]
+  [55 56 57 58 59]
+  [60 61 62 63 64]
+  [65 66 67 68 69]]]
+(2, 7, 5)
+3
+70
+#+end_example
+
+#+BEGIN_SRC ipython :session   :exports both
+5 * my_3d_arr -2
+left_mat = np.arange(6).reshape(2,3)
+right_mat = np.arange(15).reshape((3,5))
+np.dot(left_mat, right_mat)
+#+END_SRC
+
+#+RESULTS:
+: array([[ 25,  28,  31,  34,  37],
+:        [ 70,  82,  94, 106, 118]])
+***** Operation align Axis
+#+BEGIN_SRC ipython :session   :exports both
+my_3d_arr.sum(axis=0)
+my_3d_arr.sum(axis=1)
+my_3d_arr.sum(axis=2)
+#+END_SRC
+
+#+RESULTS:
+: array([[ 10,  35,  60,  85, 110, 135, 160],
+:        [185, 210, 235, 260, 285, 310, 335]])
+***** Broadcasting Rules
+#+BEGIN_SRC ipython :session   :exports both
+  my_2d_arr = np.ones(35, dtype="int_").reshape(7,5) * 3
+  my_2d_arr
+
+  my_2d_rand = np.random.random((7,5))
+  my_2d_rand
+
+  np.set_printoptions(precision=4)
+  my_2d_arr * my_2d_rand
+#+END_SRC
+
+#+RESULTS:
+: array([[ 0.5301,  0.1486,  1.6033,  1.3311,  0.3094],
+:        [ 0.325 ,  2.1556,  1.6545,  2.9889,  0.2198],
+:        [ 2.5073,  1.777 ,  2.6875,  2.2024,  0.1658],
+:        [ 1.3208,  1.9284,  2.7465,  0.4788,  1.6379],
+:        [ 2.6463,  2.5374,  0.1929,  2.6908,  0.5791],
+:        [ 0.8695,  1.4823,  0.0798,  1.2452,  1.389 ],
+:        [ 2.2688,  0.06  ,  1.6476,  1.5242,  0.2611]])
+**** Matplotlib
+***** Inline Plotting
+ #+BEGIN_SRC ipython :session :file /media/sf_host/Dropbox/OrgEmacs/images/image.svg  :exports both
+   %matplotlib inline
+   %config InlineBackend.figure_format = 'svg'
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+   mu, sigma = 100, 15
+   data_set = mu + sigma * np.random.randn(10000)
+
+   n, bins, patches = plt.hist(data_set, 100, normed=1, facecolor='r', alpha=0.75)
+
+   plt.xlabel('Smarts')
+   plt.ylabel('Probability')
+   plt.show()
+ #+END_SRC
+
+ #+RESULTS:
+ [[file:/media/sf_host/Dropbox/OrgEmacs/images/image.svg]]
+** May 29 in NYC <2017-05-29 Mon>                                       :day:
+*** TODO IT Request
+**** User Mode
+***** Project Request Input
+***** Save on Sharepoint
+***** Email
+**** Admin Mode
+***** Load Projects from Sharepoint
+***** Edit Projects --> Database
+***** Database --> Analytics
+***** Analytics --> PDF
+** May 30 in NYC <2017-05-30 Tue>                                       :day:
+*** TODO AVA Web Apps
+#+BEGIN_SRC ipython :session :file  :exports both
+  import numpy as np
+  import pandas as pd
+
+  df = pd.read_csv("/home/isaac/Dropbox/AVA/Data_CSV/FQ/ROIC.csv")
+
+  df.info()
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_new = df[(df["AV Sector"] == "Auto OEM") & (df["Country"]=="United States")]
+  df_pivot = df_new.pivot(index = "Period", columns = "Company Name", values="ROIC")
+#+END_SRC
+
+#+RESULTS:
+
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_new.pivot_table(values="ROIC", index=["Period", "Company Name"], aggfunc=lambda x: np.percentile(x, 50))
+#+END_SRC
+** May 31 in NYC <2017-05-31 Wed>                                       :day:
+*** TODO AVA Web Apps
+Remove outliers
+#+BEGIN_SRC ipython :session :file  :exports both
+  import numpy as np
+  import pandas as pd
+
+  df = pd.read_csv("/home/isaac/Dropbox/AVA/Data_CSV/FQ/NOPAT%.csv")
+
+  df.info()
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_new = df[(df["AV Sector"] == "Auto OEM") & (df["Country"]=="United States")]
+  df_pivot = df_new.pivot(index = "Period", columns = "Company Name", values="NOPAT%")
+  print(df_pivot.ix["2012-Q-4"])
+  print(df_pivot.ix["2012-Q-3"])
+  df_pivot.ix["2012-Q-4"][df_pivot.ix["2012-Q-4"] / df_pivot.ix["2012-Q-3"] -1 < 0.5]
+#+END_SRC
+
+#+RESULTS:
+: Company Name
+: Ford Motor Company (NYSE:F)           0.018916
+: Harley-Davidson, Inc. (NYSE:HOG)      0.070051
+: Tesla Motors, Inc. (NasdaqGS:TSLA)   -0.296198
+: Thor Industries, Inc. (NYSE:THO)      0.049243
+: Name: 2012-Q-4, dtype: float64
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_new.pivot_table(values="ROIC", index=["Period", "Company Name"], aggfunc=lambda x: np.percentile(x, 50))
+#+END_SRC
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_pivot_new = df_pivot.copy()
+  for col in df_pivot_new.columns:
+      for i in range(1, len(df_pivot_new.index)):
+          if np.abs(df_pivot_new[col].ix[i]/df_pivot_new[col].ix[i-1] - 1) > 0.5:
+              df_pivot_new[col].ix[i] = np.nan
+          else:
+              df_pivot_new[col].ix[i] = df_pivot[col].ix[i]
+          print(col)
+          print(np.abs(df_pivot_new[col].ix[i]/df_pivot_new[col].ix[i-1] - 1))
+
+  df_pivot_new
+#+END_SRC
+
+#+BEGIN_SRC ipython :session :file  :exports both
+  df_pivot_new = df_pivot.copy()
+  df_q3 = df_pivot_new.quantile(0.75)
+  df_q1 = df_pivot_new.quantile(0.25)
+  df_iqr = df_q3 - df_q1
+  df_iqr
+
+  for col in df_pivot_new.columns:
+      for i in df_pivot_new.index:
+          if (df_pivot_new[col].ix[i] < (df_q1[col] - 1.5 * df_iqr[col])) or (df_pivot_new[col].ix[i] > (df_q3[col] + 1.5 * df_iqr[col])):
+              df_pivot_new[col].ix[i] = np.nan
+
+  df_pivot_new.quantile(0.2, axis=1)
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Period
+2012-Q-1    0.034907
+2012-Q-2    0.030372
+2012-Q-3    0.032734
+2012-Q-4   -0.107130
+2013-Q-1    0.014912
+2013-Q-2    0.024491
+2013-Q-3    0.027518
+2013-Q-4    0.019933
+2014-Q-1   -0.000348
+2014-Q-2    0.002093
+2014-Q-3    0.011455
+2014-Q-4    0.006260
+2015-Q-1    0.013894
+2015-Q-2    0.034399
+2015-Q-3    0.035733
+2015-Q-4   -0.006624
+2016-Q-1    0.039319
+2016-Q-2    0.035381
+2016-Q-3    0.033714
+2016-Q-4    0.038119
+2017-Q-1    0.026970
+Name: 0.2, dtype: float64
+#+end_example
+*** Docker Installation
+**** Install Docker 1.8.3
+***** Check docker images: docker images
+***** Check docker containers: docker ps -a
+**** Install Docker compose 1.4.2
+***** curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-Linux-x86_64 > /tmp/docker-compose
+***** cd /tmp/
+***** chmod +x docker-compose
+***** sudo mv docker-compose /usr/local/bin/
+**** Build a dockerized app
+***** folder structure
+****** touch requirement.txt
+****** touch .gitignore
+****** touch Dockerfile: recipe of building docker image
+****** touch docker-compose.yml
+****** touch .dockerignore
+****** mkdir instance
+******* touch instance/__init__.py
+******* touch instance/settings.py.production_example
+****** mkdir config
+******* touch config/__init__.py
+******* touch config/settings.py
+***** 
+* 2017-June-Log
+** June 5 in NYC <2017-06-05 Mon>                                       :day:
+*** [[file:~/Dropbox/DeepLearning/2_CNN/CNN.org][Deep Learning]]
+*** Emacs Meetup
+**** Ligtning Talk
+***** [[https://www.emacswiki.org/emacs/TrampMode][Tramp]]: ssh for remote machine control
+***** [[http://www.flycheck.org/en/latest/][Flycheck]]: syntax checker
+***** Googler-search: cool link generation
+***** Cool shell commands
+****** Shpotify
+****** pianobar
+****** fast
+****** cmus
+****** Youtube-dl
+****** tra fr:
+***** user select package
+** June 6 in NYC <2017-06-06 Tue>                                       :day:
+*** [[http://www.tendereasy.com/en-GB/solutions/freight-tendering-21521045?gclid=Cj0KEQjwmcTJBRCYirao6oWPyMsBEiQA9hQPbgowiAXvAzuceYXPDeEbZSO9w1fSHOq2sg5cL8xK8P8aAo9f8P8HAQ][TenderEasy]]
+**** [[http://www.tendereasy.com/en-GB/story-33907212][Timeline]]: 
+- 4 years to transform from a consultancy to an e-sourcing SW
+- another 4 years to launch the platform and onboard first customer
+*** [[http://www.appliedvaluegroup.com/applied-vc-growth-capital#garden-growth-capital-1][Portfolio Company]] --> Reach out for demo (email Manuel)
+*** Fake it until we do it
+**** Build the website (Integrate with Current [[http://www.appliedvalueanalytics.com/][AVA website]]) which fully illustrates our philosophy and methodology
+**** Highlight the Deep Learning and AI features
+**** Start selling generic optimization consultancy/SW before we actually build THE platform
+*** [[file:~/Dropbox/OPT/optimization.org][AV Optimization]]
+**** Model Validation
+**** UI
+*** [[http://appliedvalueanalytics.com/][Front End]]
+**** Building while training(skeleton done)
+**** Gap closing
+*** Adjusted AVA Timeline
+**** Load all basic ROIC apps (this week) <2017-06-09 Fri>
+**** Analytics Optimization Web Sekleton (3 weeks, including this week) <2017-06-23 Fri>
+**** Building Optimization Applets(4 weeks, 1 steel + 8~9 others) <2017-07-28 Fri>
+**** Polishing UI + Formalize Process(4 weeks) <2017-08-25 Fri>
+**** Selling <2017-09-15 Fri> while building the platform <2018-06-22 Fri>
+** June 7 in NYC <2017-06-07 Wed>                                       :day:
+*** TODO App Implementation
+**** Gapminder 
+**** Pivot
+**** Export Data
+*** 
+** June 8 in NYC <2017-06-08 Thu>                                       :day:
+*** 
