@@ -2319,3 +2319,9 @@ Name: 0.2, dtype: float64
 **** git remote add origin git@github.com:username/reponame.git
 **** git push -u origin master
 *** Algorithms in Python
+** June 10 in NYC <2017-06-10 Sat>                                      :day:
+*** RNN
+*** [[https://www.youtube.com/watch?v=NfnWJUyUJYU][Convolutional Neural Networks for Visual Recognition]]
+*** [[https://www.youtube.com/watch?v=UzxYlbK2c7E&list=PLA89DCFA6ADACE599][Machine Learning]]
+*** [[https://www.coursera.org/learn/machine-learning/home/welcome][Machine Learning Coursera]]
+*** [[https://www.coursera.org/learn/neural-networks/home/welcome][Neural Networks]]
