@@ -1,4 +1,4 @@
-#+setupfile: ~/Dropbox/OrgEmacs/themes/theme-readtheorg.setup
+#+setupfile: ~/Dropbox/OrgEmacs/themes/theme-bigblow.setup
 #+OPTIONS: num:nil whn:2 toc:4 H:6
 
 * 2017-Work-Log
@@ -2325,3 +2325,50 @@ Name: 0.2, dtype: float64
 *** [[https://www.youtube.com/watch?v=UzxYlbK2c7E&list=PLA89DCFA6ADACE599][Machine Learning]]
 *** [[https://www.coursera.org/learn/machine-learning/home/welcome][Machine Learning Coursera]]
 *** [[https://www.coursera.org/learn/neural-networks/home/welcome][Neural Networks]]
+** June 11 in NYC <2017-06-11 Sun>                                      :day:
+*** Sphinx (Not for me)
+**** sphinx-build
+**** sphinx-quickstart doc
+*** Pelican
+**** Install Pelican and Markdown
+- pip install pelican
+- pip install markdown
+*** Blog Strategy
+**** Static
+**** Homepage: HTML+CSS+JS
+**** Sections: Org-mode export
+** June 12 in NYC <2017-06-12 Mon>                                      :day:
+*** AVA On Board
+**** Goals: Major Update in 11 days <2017-06-23 Fri>
+***** Steel Optimizer: Validation and Basic UI
+***** AVA Webapp
+***** Optimization Applets
+**** [[file:~/Dropbox/OPT/optimization.org][Steel Optimization]]
+**** Bokeh: AVA Webapp
+***** [[http://bokeh.pydata.org/en/latest/][Bokeh]]
+**** Optimization Applets: Lindo + PulP
+***** [[https://pythonhosted.org/PuLP/][Pulp]]
+**** Purchasing Analytics
+***** [[http://www.tendereasy.com/en-GB/story-33907212][TenderEasy]]
+*** TODO Tasks
+**** Finish all AVA apps <2017-06-12 Mon>
+***** ROIC
+***** Data table download
+***** Idea Generation
+***** Data validation
+**** Steel optimization <2017-06-14 Wed>
+***** Results validation
+***** Basic UI
+**** Optimization Applets(Linear) <2017-06-16 Fri>
+***** Blending Models
+***** Media Buying
+***** Inventory Management
+***** Product Mix
+***** Building Block Method
+***** Waste minization
+***** Plant locating
+***** Staff scheduling
+***** Transportation Models
+**** Optimization Applets Requirements
+***** Control
+***** Visualized Output
