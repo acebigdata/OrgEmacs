@@ -2339,24 +2339,24 @@ Name: 0.2, dtype: float64
 **** Sections: Org-mode export
 ** June 12 in NYC <2017-06-12 Mon>                                      :day:
 *** AVA On Board
-**** Goals: Major Update in 11 days <2017-06-23 Fri>
+**** DONE Goals: Major Update in 11 days <2017-06-23 Fri>
 ***** Steel Optimizer: Validation and Basic UI
 ***** AVA Webapp
 ***** Optimization Applets
-**** [[file:~/Dropbox/OPT/optimization.org][Steel Optimization]]
-**** Bokeh: AVA Webapp
+**** DONE Bokeh: AVA Webapp
 ***** [[http://bokeh.pydata.org/en/latest/][Bokeh]]
-**** Optimization Applets: Lindo + PulP
+**** [[file:~/Dropbox/OPT/optimization.org][Steel Optimization]]
+**** DONE Optimization Applets: Lindo + PulP
 ***** [[https://pythonhosted.org/PuLP/][Pulp]]
 **** Purchasing Analytics
 ***** [[http://www.tendereasy.com/en-GB/story-33907212][TenderEasy]]
 *** TODO Tasks
-**** Finish all AVA apps <2017-06-12 Mon>
+**** TODO Finish all AVA apps <2017-06-12 Mon>
 ***** ROIC
 ***** Data table download
 ***** Idea Generation
 ***** Data validation
-**** Steel optimization <2017-06-14 Wed>
+**** TODO Steel optimization <2017-06-14 Wed>
 ***** Results validation
 ***** Basic UI
 **** Optimization Applets(Linear) <2017-06-16 Fri>
@@ -2372,3 +2372,5 @@ Name: 0.2, dtype: float64
 **** Optimization Applets Requirements
 ***** Control
 ***** Visualized Output
+** June 13 in NYC <2017-06-13 Tue>                                      :day:
+*** 
