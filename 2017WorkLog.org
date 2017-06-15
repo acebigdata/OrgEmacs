@@ -2373,4 +2373,29 @@ Name: 0.2, dtype: float64
 ***** Control
 ***** Visualized Output
 ** June 13 in NYC <2017-06-13 Tue>                                      :day:
-*** 
+*** Tensorboard
+*** Data Portfolio
+**** [[http://www.kdnuggets.com/2016/07/five-big-data-projects-cant-overlook.html][Build a Data Portfolio]]
+**** [[https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/][Build a Data Blog]]
+**** [[https://www.dataquest.io/blog/build-a-data-science-portfolio/][Build a Data Portfolio to get Job]]
+*** Data Blog with Jupyter Notebook
+**** Install Pelican
+**** pelican quickstart
+**** Install the Jupyter plugin
+**** modify pelicanconf.py
+**** Create A Jupyter Notebook
+**** Copy the notebook into the content folder
+**** Create a file has the same name as your notebook, but the extension .ipynb-meta
+** June 14 in NYC <2017-06-14 Wed>                                      :day:
+*** Pelican Deployment
+**** local: pelican content
+**** website: pelican content -s publishconf.py
+*** R for Jupyter Notebook
+**** sudo apt-get install libcurl4-openssl-dev libssl-dev
+**** install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+**** devtools::install_github('IRkernel/IRkernel')
+**** IRkernel::installspec()
+
+
+
+
